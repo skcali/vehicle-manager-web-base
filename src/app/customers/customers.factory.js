@@ -37,7 +37,7 @@
        }
 
        function update(id, customer) {
-           return $http.put(apiUrl + 'customers/', + id, customer);
+           return $http.put(apiUrl + 'customers/' + id, customer);
        }
 
        function create(customer) {

@@ -1,27 +1,31 @@
 <table class="table table-striped">
   <thead>
       <tr>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Email</th>
-        <th>Telephone</th>
+        <th>Make</th>
+        <th>Model</th>
+        <th>Color</th>
+        <th>Retail Price</th>
+        <th>Vehicle Type</th>
+        <th>Year</th>
         <th width="1%"></th>
         <th width="1%"></th>
       </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>VEHICLES</td>
-      <td></td>
-      <td></td>
-      <td></td>
+    <tr ng-repeat="vehicle in vehiclesGridCtrl.vehicles">
+      <td>{{vehicle.make}}</td>
+      <td>{{vehicle.model}}</td>
+      <td>{{vehicle.color}}</td>
+      <td>{{vehicle.retailPrice}}</td>
+      <td>{{vehicle.vehicleType}}</td>
+      <td>{{vehicle.year}}</td>
       <td>
-        <a href="" class="btn btn-primary">
+        <a ui-sref="vehicles.detail({ id: vehicle.vehicleId })" class="btn btn-primary">
           <i class="glyphicon glyphicon-edit"></i>
         </a>
       </td>
       <td>
-        <a href="" class="btn btn-danger">
+        <a href="" class="btn btn-danger" ng-click="vehiclesGridCtrl.deleteVehicle(vehicle)">
           <i class="glyphicon glyphicon-trash"></i>
         </a>
       </td>

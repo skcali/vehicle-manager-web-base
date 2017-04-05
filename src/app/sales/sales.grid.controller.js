@@ -5,10 +5,10 @@
         .module('app.sales')
         .controller('SalesGridController', SalesGridController);
 
-    SalesGridController.$inject = ['salesFactory'];
+    SalesGridController.$inject = ['salesFactory', 'SweetAlert'];
 
     /* @ngInject */
-    function SalesGridController(salesFactory) {
+    function SalesGridController(salesFactory, SweetAlert) {
         var vm = this;
 
         activate();

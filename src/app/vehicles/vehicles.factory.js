@@ -37,7 +37,7 @@
        }
 
        function update(id, vehicle) {
-           return $http.put(apiUrl + 'vehicles/', + id, vehicle);
+           return $http.put(apiUrl + 'vehicles/' + id, vehicle);
        }
 
        function create(vehicle) {

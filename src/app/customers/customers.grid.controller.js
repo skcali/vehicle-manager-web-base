@@ -14,19 +14,19 @@
         vm.deleteCustomer = function(customer) {
             SweetAlert.swal({
                     title: "Are you sure?",
-                    text: "You will not be able to recover this customer!",
+                    text: `You will not be able to recover ${customer.firstName}'s data!`,
                     type: "warning",
                     showCancelButton: true,
                     confirmButtonColor: "#DD6B55",
                     confirmButtonText: "Yes, delete it!",
                     closeOnConfirm: false
                 },
-                function(isConfirm) { //Function that triggers on user action.
+                function(isConfirm) {
                     if (isConfirm) {
                         SweetAlert.swal("Deleted!");
                         customersFactory
                             .remove(customer.customerId)
-                            .then(function(response) {
+                            .then(function() {
                                 vm.customers.splice(vm.customers.indexOf(customer), 1);
                             });
                     } else {
@@ -42,6 +42,9 @@
                 .getAll()
                 .then(function(data) {
                     vm.customers = data;
+                })
+                .catch(function(error) {
+                    alert(error);
                 });
         }
     }

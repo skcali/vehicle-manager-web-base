@@ -33,7 +33,7 @@
             .state('customers.detail', {
               url: '/detail/:id',
               controller: 'CustomersDetailController as customersDetailCtrl',
-              templateUrl: 'app/sales/customers.detail.html'
+              templateUrl: 'app/customers/customers.detail.html'
             })
             .state('sales', {
               url: '/sales',
