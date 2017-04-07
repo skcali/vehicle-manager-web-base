@@ -1,5 +1,5 @@
 <buttton ui-sref="customers.detail" class="btn btn-primary pull-right">
-  <i class="glyphicon glyphicon-plus"></i>
+  <i class="glyphicon glyphicon-plus"></i> Add Customer
 </buttton>
 <table class="table table-striped">
   <thead>
@@ -8,8 +8,8 @@
         <th>Last Name</th>
         <th>Email</th>
         <th>Telephone</th>
-        <th>Outstanding Payments</th>
-        <th>Recieved Payments</th>
+        <th class="text-center">Outstanding Payments</th>
+        <th class="text-center">Recieved Payments</th>
         <th width="1%"></th>
         <th width="1%"></th>
       </tr>
@@ -20,8 +20,8 @@
       <td>{{customer.lastName}}</td>
       <td>{{customer.emailAddress}}</td>
       <td>{{customer.telephone}}</td>
-      <td>{{customer.outstandingSalesCount}}</td>
-      <td>{{customer.receivedSalesCount}}</td>
+      <td class="text-center">{{customer.outstandingSalesCount}}</td>
+      <td class="text-center">{{customer.receivedSalesCount}}</td>
       <td>
         <a ui-sref="customers.detail({ id: customer.customerId })" class="btn btn-primary">
           <i class="glyphicon glyphicon-edit"></i>
