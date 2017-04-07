@@ -5,6 +5,8 @@
         .module('app', [
           'oitozero.ngSweetAlert',
           'ui.router',
+          'ui.select',
+          'ngSanitize',
           'app.customers',
           'app.dashboard',
           'app.sales',
